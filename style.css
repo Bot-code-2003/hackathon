@@ -509,7 +509,7 @@ p {
     padding-right: 2.5px;
   }
   .domain {
-    width: 113px !important;
+    width: 100% !important;
     height: 88px !important;
     margin-top: 3px !important;
   }
