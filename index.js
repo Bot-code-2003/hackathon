@@ -114,17 +114,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
   }
 
   // animateGroup(".registration-domain");
-  function executeAnimations() {
-    vrAnimation(".vr-img");
-    imageAnimation(".section2 .img-container", ".section2");
-    paraAnimation(".section2 .para-container", ".section2");
-    imageAnimation(".section3 .img-container", ".section3");
-    paraAnimation(".section3 .para-container", ".section3");
-    animateGroups(".whatsapp-groups", ".group");
-    regAndDomain();
-    social();
-    // Add more animation calls here as needed
-  }
 
   function executeAnimations() {
     vrAnimation(".vr-img");

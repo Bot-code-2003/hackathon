@@ -11,6 +11,37 @@ body {
   font-style: normal !important;
 }
 
+.confidential p {
+  position: fixed;
+  left: 0;
+  top: 70%;
+  transform: rotate(-90deg) translateY(-50%);
+  transform-origin: top left;
+  white-space: nowrap; /* Ensures the text stays in one line */
+  letter-spacing: 5px;
+}
+
+#background-video {
+  opacity: 0.1;
+  position: fixed; /* Use fixed or absolute positioning */
+  right: 0;
+  bottom: 0;
+  min-width: 300%;
+  min-height: 300%;
+  width: auto;
+  height: auto;
+  z-index: -100; /* Keep the video behind other content */
+  background-size: cover;
+}
+
+#bg-img {
+  opacity: 0.05;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -99;
+}
+
 /* Add this at the bottom of your CSS file */
 
 p {
@@ -75,7 +106,7 @@ span {
 .container {
   width: 90%;
   margin: 20px auto;
-  background-color: #1f1f1f;
+  background-color: #1f1f1f9d;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
@@ -208,7 +239,7 @@ p {
 }
 
 .announcements {
-  background-color: #161616;
+  /* background-color: ; */
   color: var(--text-color);
   padding: 20px;
   border-radius: var(--border-radius);
@@ -216,7 +247,7 @@ p {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .announcements .container {
-  background-color: #1f1f1f;
+  background-color: #1f1f1f9d;
 }
 
 .announcements h1 {
@@ -252,6 +283,32 @@ p {
     max-width: 100% !important;
     position: relative !important;
     font-size: 5px !important;
+  }
+
+  #watsapp .container h2,
+  #watsapp .container p {
+    font-size: medium;
+  }
+  #watsapp .container li {
+    font-size: small;
+  }
+
+  #watsapp,
+  #registration,
+  #socialmedia {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .confidential p {
+    font-size: small !important;
+    position: fixed;
+    left: -10px !important;
+    top: 65%;
+    transform: rotate(-90deg) translateY(-50%);
+    transform-origin: top left;
+    white-space: nowrap; /* Ensures the text stays in one line */
+    letter-spacing: 3px !important;
   }
 
   .container,
@@ -294,10 +351,13 @@ p {
   }
 
   .section2 img,
-  .section3 img,
-  .platform img {
+  .section3 img {
     width: 50%; /* Make images responsive */
     height: auto;
+  }
+
+  #socialmedia .platform img {
+    width: 30% !important;
   }
 
   .container2,
@@ -365,8 +425,8 @@ p {
   }
   .domain {
     margin-top: 5px !important;
-    width: 130px !important;
-    height: 130px !important;
+    width: 120px !important;
+    height: 110px !important;
     /* height: auto !important; */
   }
   .domain p {
@@ -376,10 +436,11 @@ p {
   .domains {
     display: flex !important;
     flex-wrap: wrap !important;
-    justify-content: space-around;
+    gap: 5px;
+    justify-content: flex-start;
   }
   .domain p .icon {
-    font-size: 30px;
+    font-size: 25px;
   }
 
   .domain h3 {
