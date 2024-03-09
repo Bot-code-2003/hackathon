@@ -317,7 +317,7 @@ p {
   }
 
   .vr-img img {
-    width: 435px !important;
+    width: 100% !important;
     position: absolute !important;
   }
 
