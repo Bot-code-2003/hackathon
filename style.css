@@ -464,3 +464,53 @@ p {
     padding-right: 5px;
   }
 }
+
+@media only screen and (max-width: 500px) {
+  /* Your CSS styles for XS devices go here */
+  body h1 {
+    font-size: 20px !important;
+  }
+  body h2 {
+    font-size: 15px !important;
+  }
+  body h3 {
+    font-size: 10px !important;
+  }
+  body p {
+    font-size: 10px !important;
+  }
+  li {
+    font-size: 10px !important;
+  }
+  nav a {
+    font-size: 9px !important;
+    margin-right: 5px !important;
+  }
+  .hero h1 {
+    font-size: 20px !important;
+  }
+  .hero h2 {
+    font-size: 15px !important;
+  }
+  .hero p {
+    font-size: 10px !important;
+    text-align: center;
+  }
+
+  .confidential p {
+    font-size: 8px !important;
+    letter-spacing: 2px !important;
+  }
+  .para-container p {
+    font-size: 10px !important;
+    text-align: center;
+    margin-left: 0;
+    padding-left: 2.5px;
+    padding-right: 2.5px;
+  }
+  .domain {
+    width: 113px !important;
+    height: 88px !important;
+    margin-top: 3px !important;
+  }
+}
