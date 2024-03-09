@@ -115,11 +115,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   // animateGroup(".registration-domain");
   function executeAnimations() {
-    // fade("nav", 1, ".hero");
-    // fade("#org-info", 2, ".hero");
     vrAnimation(".vr-img");
-    // fade(".section2", 1, ".section2");
-    // fade(".section3", 1, ".section3");
     imageAnimation(".section2 .img-container", ".section2");
     paraAnimation(".section2 .para-container", ".section2");
     imageAnimation(".section3 .img-container", ".section3");
@@ -130,19 +126,21 @@ document.addEventListener("DOMContentLoaded", (event) => {
     // Add more animation calls here as needed
   }
 
-  function executeAnimationsForMobile() {
-    fade("nav", 1, ".hero");
-    fade("#org-info", 1, ".hero");
-    fade(".section2", 1, ".section2");
-    fade(".section3", 1, ".section3");
-    fade(".whatsapp-groups", 1, ".whatsapp-groups");
-    fade(".registration-domain", 1, ".registration-domain");
-    fade(".social-media-strategy", 1, ".social-media-strategy");
-    fade(".announcements", 1, ".announcements");
+  function executeAnimations() {
+    vrAnimation(".vr-img");
+    imageAnimation(".section2 .img-container", ".section2");
+    imageAnimation(".section2 .para-container", ".section2");
+    imageAnimation(".section3 .img-container", ".section3");
+    imageAnimation(".section3 .para-container", ".section3");
+    animateGroups(".whatsapp-groups", ".group");
+    regAndDomain();
+    social();
+    // Add more animation calls here as needed
   }
-  if (window.matchMedia("(min-width: 700px)").matches) {
-    executeAnimations(); // Execute animations for larger screens
-  } else {
-    executeAnimationsForMobile();
-  }
+  // if (window.matchMedia("(min-width: 700px)").matches) {
+  //   executeAnimations(); // Execute animations for larger screens
+  // } else {
+  //   executeAnimationsForMobile();
+  // }
+  executeAnimations();
 });

@@ -20,11 +20,11 @@ p {
 nav {
   padding: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   /* background-color: #2e2e2e36; */
 }
 nav a {
-  margin-right: 40px;
+  margin-right: 60px;
   text-decoration: none;
   color: #adff2f;
   font-weight: bolder;
@@ -44,6 +44,12 @@ nav a {
 
 #org-info p {
   font-weight: 400 !important;
+}
+
+#org-info {
+  width: 100%;
+  margin-top: 80px;
+  margin-bottom: 30px;
 }
 
 span {
@@ -241,6 +247,9 @@ p {
 
 @media only screen and (max-width: 600px) {
   body {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
     position: relative !important;
     font-size: 5px !important;
   }
@@ -249,7 +258,19 @@ p {
   .container2,
   .container3 {
     width: 100%;
-    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+
+  .px-4 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .pt-5 {
+    padding-top: 0 !important;
   }
 
   p {
@@ -289,7 +310,7 @@ p {
   .group,
   .domain,
   .platform {
-    padding: 10px;
+    padding: 5px;
   }
 
   .group ul li:before,
@@ -374,5 +395,11 @@ p {
   .announcements li,
   .announcements p {
     font-size: 15px;
+  }
+
+  #org-info p {
+    margin: 0 !important;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }
