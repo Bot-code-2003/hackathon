@@ -1,0 +1,378 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #161616 !important;
+  position: relative;
+  color: white !important;
+  font-family: "Roboto Mono", monospace !important;
+  font-optical-sizing: auto !important;
+  font-weight: 500 !important;
+  font-style: normal !important;
+}
+
+/* Add this at the bottom of your CSS file */
+
+p {
+  font-size: large;
+}
+
+nav {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  /* background-color: #2e2e2e36; */
+}
+nav a {
+  margin-right: 40px;
+  text-decoration: none;
+  color: #adff2f;
+  font-weight: bolder;
+  font-size: large;
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+
+.vr-img {
+  opacity: 0.3;
+  z-index: -1;
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#org-info p {
+  font-weight: 400 !important;
+}
+
+span {
+  letter-spacing: 2px;
+  font-weight: bolder;
+}
+
+.section2 img,
+.section3 img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.container2,
+.container3 {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+  margin: 20px auto;
+  background-color: #1f1f1f;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.group {
+  margin-bottom: 20px;
+  border-left: 4px solid #6200ee;
+  background-color: #292929;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.group:hover {
+  background-color: #2e2e2e;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.group h2 {
+  color: #adff2f;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.group p,
+.group ul li {
+  color: #e0e0e0;
+  font-size: 16px;
+}
+
+.group ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.group ul li {
+  margin-left: 20px;
+  position: relative;
+}
+
+.group ul li:before {
+  content: "•";
+  color: #6200ee; /* Bullet color */
+  font-size: 20px;
+  position: absolute;
+  left: -20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  margin-left: 20px;
+}
+
+.domains {
+  display: flex;
+  justify-content: space-between;
+}
+
+.domain {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  width: 220px;
+  border-radius: 5px;
+  background-color: #292929;
+  padding: 15px;
+  text-align: center;
+}
+.domain p {
+  margin: 0;
+}
+
+.domain:hover {
+  background-color: #2e2e2e;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+  font-size: 48px;
+  display: block;
+  margin: auto;
+}
+
+.platform {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #292929;
+  border: 2px solid var(--accent-color);
+  padding: 15px;
+  border-radius: var(--border-radius);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.platform img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.platform:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.platform h2 {
+  color: var(--heading-color);
+  margin-bottom: 10px;
+}
+
+.platform ul {
+  list-style: none;
+  padding: 0;
+}
+
+.platform ul li {
+  margin-bottom: 5px;
+}
+
+.platform ul li:before {
+  content: "•";
+  color: var(--accent-color);
+  margin-right: 5px;
+}
+
+.announcements {
+  background-color: #161616;
+  color: var(--text-color);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.announcements .container {
+  background-color: #1f1f1f;
+}
+
+.announcements h1 {
+  color: var(--heading-color);
+}
+
+.announcements p,
+.announcements ol li {
+  color: var(--text-color);
+}
+
+.announcements ol {
+  counter-reset: item;
+  list-style-type: none;
+}
+
+.announcements ol li {
+  counter-increment: item;
+  margin-bottom: 10px;
+}
+
+.announcements ol li:before {
+  content: counters(item, ".") " ";
+  color: var(--accent-color);
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    position: relative !important;
+    font-size: 5px !important;
+  }
+
+  .container,
+  .container2,
+  .container3 {
+    width: 100%;
+    padding: 10px;
+  }
+
+  p {
+    font-size: small !important;
+  }
+
+  nav {
+    padding: 5px !important;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: #2e2e2e36; */
+  }
+  nav a {
+    margin-right: 10px !important;
+    text-decoration: none;
+    color: #adff2f;
+    font-weight: bold;
+    font-size: small;
+    cursor: pointer;
+    letter-spacing: 1px;
+  }
+
+  .section2 img,
+  .section3 img,
+  .platform img {
+    width: 50%; /* Make images responsive */
+    height: auto;
+  }
+
+  .container2,
+  .container3,
+  .platform {
+    flex-direction: column; /* Stack elements vertically */
+    gap: 20px;
+  }
+
+  .group,
+  .domain,
+  .platform {
+    padding: 10px;
+  }
+
+  .group ul li:before,
+  .platform ul li:before {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .announcements ol li:before {
+    margin-right: 10px;
+  }
+
+  /* Adjusting navigation and hero image positioning for smaller screens */
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .vr-img {
+    position: relative !important;
+    width: 100% !important;
+  }
+
+  .vr-img img {
+    width: 435px !important;
+    position: absolute !important;
+  }
+
+  .hero,
+  .section2,
+  .section3,
+  #watsapp,
+  #registration,
+  .social-media-strategy,
+  .announcements {
+    margin-bottom: 30px;
+  }
+
+  .section2 {
+    display: flex !important;
+    justify-content: center !important;
+  }
+  .img-container,
+  .para-container {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .domain {
+    margin-top: 5px !important;
+    width: 130px !important;
+    height: 130px !important;
+    /* height: auto !important; */
+  }
+  .domain p {
+    margin: 0 !important;
+  }
+
+  .domains {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-around;
+  }
+  .domain p .icon {
+    font-size: 30px;
+  }
+
+  .domain h3 {
+    font-size: small;
+  }
+  .platform li {
+    font-size: 15px;
+  }
+  .platform img {
+    width: 150px;
+  }
+
+  .announcements li,
+  .announcements p {
+    font-size: 15px;
+  }
+}
