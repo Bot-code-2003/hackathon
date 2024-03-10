@@ -48,6 +48,29 @@ p {
   font-size: large;
 }
 
+.countdown {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.countdown-container {
+  justify-content: space-around;
+  width: 50%;
+  display: flex;
+}
+
+.countdown-container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.countdown-container p {
+  margin: 0;
+}
+
 nav {
   padding: 20px;
   display: flex;
