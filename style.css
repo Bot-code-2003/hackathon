@@ -563,4 +563,7 @@ p {
   .vr-img img {
     top: 40px;
   }
+  .countdown-container {
+    gap: 10px;
+  }
 }
