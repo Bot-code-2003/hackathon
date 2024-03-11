@@ -38,12 +38,20 @@ document.addEventListener("DOMContentLoaded", (event) => {
   }
 
   // top to down slide
-  function vrAnimation(name) {
+  function vrAnimation(name, trigger) {
     gsap.from(name, {
       y: "-100%", // Start from above the view
       opacity: 0, // Start invisible
       duration: 2, // Animation duration
       ease: "power2.out", // Easing function for a smooth effect
+      scrollTrigger: {
+        // markers: true,
+        trigger: trigger,
+        toggleActions: "play none none none",
+        start: "top 85%",
+        // end: "top 20%",
+        // markers: true,
+      },
     });
   }
 
@@ -80,6 +88,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
   }
 
+  //Slow domain pop effect
   function regAndDomain() {
     gsap.utils.toArray(".domain").forEach((domain) => {
       gsap.from(domain, {
@@ -97,6 +106,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
   }
 
+  //For social media posts
   function social() {
     gsap.utils.toArray(".platform").forEach((platform) => {
       gsap.from(platform, {
@@ -116,7 +126,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   // animateGroup(".registration-domain");
 
   function executeAnimations() {
-    vrAnimation(".vr-img");
+    vrAnimation(".vr-img", ".section2");
     imageAnimation(".section2 .img-container", ".section2");
     imageAnimation(".section2 .para-container", ".section2");
     imageAnimation(".section3 .img-container", ".section3");
@@ -124,7 +134,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     animateGroups(".whatsapp-groups", ".group");
     regAndDomain();
     social();
-    // Add more animation calls here as needed
   }
   // if (window.matchMedia("(min-width: 700px)").matches) {
   //   executeAnimations(); // Execute animations for larger screens

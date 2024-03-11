@@ -9,6 +9,7 @@ body {
   font-optical-sizing: auto !important;
   font-weight: 500 !important;
   font-style: normal !important;
+  height: 100%;
 }
 
 .confidential p {
@@ -72,10 +73,14 @@ p {
 }
 
 nav {
+  z-index: 20;
+  position: sticky;
+  width: 100%;
   padding: 20px;
   display: flex;
   justify-content: space-around;
-  /* background-color: #2e2e2e36; */
+  background-color: #32323257;
+  top: 0;
 }
 nav a {
   margin-right: 60px;
@@ -300,6 +305,9 @@ p {
 }
 
 @media only screen and (max-width: 600px) {
+  nav {
+    display: none !important;
+  }
   body {
     margin: 0 !important;
     padding: 0 !important;
@@ -423,6 +431,7 @@ p {
   .vr-img img {
     width: 100% !important;
     position: absolute !important;
+    top: 10px;
   }
 
   .hero,
@@ -486,6 +495,11 @@ p {
     padding-left: 5px;
     padding-right: 5px;
   }
+
+  #org-info {
+    margin-top: 0px !important;
+    padding-top: 80px !important;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -539,5 +553,14 @@ p {
 
   .domains {
     justify-content: space-around;
+  }
+
+  #org-info {
+    margin-top: 0px !important;
+    padding-top: 50px !important;
+  }
+
+  .vr-img img {
+    top: 40px;
   }
 }
