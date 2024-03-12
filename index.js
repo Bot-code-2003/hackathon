@@ -141,6 +141,21 @@ document.addEventListener("DOMContentLoaded", (event) => {
   //   executeAnimationsForMobile();
   // }
   executeAnimations();
+  gsap.utils
+    .toArray(".bootcamp .card, .hackathon .card, .prize-section .prize-card")
+    .forEach((card) => {
+      gsap.from(card, {
+        duration: 1, // Animation duration in seconds
+        autoAlpha: 0, // Animate both CSS opacity and visibility to make the element fade in
+        y: 50, // Starting position (pixels) from the bottom
+        ease: "back.out(1.7)", // An easing function for a nice bounce effect
+        scrollTrigger: {
+          trigger: card,
+          start: "top 70%", // Start the animation when the top of the card hits 80% of the viewport height
+          toggleActions: "play none none none", // Play the animation once when the criteria are met
+        },
+      });
+    });
 });
 
 //countdown timer
@@ -150,7 +165,7 @@ const minutes = document.getElementById("minutes");
 const seconds = document.getElementById("seconds");
 
 const presentYear = new Date().getFullYear();
-const hackathonDay = new Date(`April 23 ${presentYear} 00:00:00`);
+const hackathonDay = new Date(`April 01 ${presentYear} 00:00:00`);
 
 function updateTime() {
   const currentTime = new Date();
