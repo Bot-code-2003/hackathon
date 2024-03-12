@@ -815,9 +815,17 @@ hr {
   right: -5px;
   bottom: -5px;
   z-index: -1;
-  background: linear-gradient(270deg, #6600ff, #c0c0c0, #ca32cd, #ffcc00);
+  background: linear-gradient(
+    270deg,
+    #ffcc00,
+    #d0d0d0,
+    #870da0,
+    #d0d0d0,
+    #ffcc00,
+    #d0d0d0
+  );
   background-size: 400% 400%;
-  animation: rotateStrip 4s linear infinite;
+  animation: rotateStrip 2s linear infinite;
   border-radius: 10px;
 }
 
