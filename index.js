@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         ease: "back.out(1.7)", // An easing function for a nice bounce effect
         scrollTrigger: {
           trigger: card,
-          start: "top 70%", // Start the animation when the top of the card hits 80% of the viewport height
+          start: "top 75%", // Start the animation when the top of the card hits 80% of the viewport height
           toggleActions: "play none none none", // Play the animation once when the criteria are met
         },
       });

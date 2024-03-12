@@ -222,6 +222,12 @@ p {
   margin: auto;
 }
 
+hr {
+  display: block; /* or 'inline-block' if you prefer */
+  width: 100%;
+  margin: 20px auto !important;
+}
+
 .platform {
   display: flex;
   justify-content: space-around;
@@ -718,14 +724,14 @@ p {
 
 .prize-card h2 {
   margin: 0;
-  color: #333;
+  color: #000000;
   margin-bottom: 15px;
 }
 
 .prize-card p {
   margin: 0;
   font-size: 18px;
-  color: #666;
+  color: #292929;
 }
 
 .first,
@@ -733,18 +739,123 @@ p {
 .third {
   background-color: #ffcc00;
   transform: scale(1);
+  /* General glow effect */
+  box-shadow: 0 0 8px rgba(255, 204, 0, 0.6); /* Adjust color and blur radius as needed */
+  position: relative;
+  overflow: hidden;
+}
+
+.first::after,
+.second::after,
+.third::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.4) 0%,
+    transparent 60%
+  );
+  animation: shine 3s infinite ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes shine {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .second {
   background-color: #c0c0c0;
+  /* Adjust the glow color to match the background */
+  box-shadow: 0 0 8px rgba(192, 192, 192, 0.6);
 }
 
 .third {
   background-color: #cd7f32;
+  /* Adjust the glow color to match the background */
+  box-shadow: 0 0 8px rgba(205, 127, 50, 0.6);
 }
 
 .prize-card:hover {
   transform: translateY(-5px);
+}
+
+/*sponsers*/
+@keyframes rotateStrip {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.sponser-container {
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+.sponser-container::before {
+  content: "";
+  position: absolute;
+  top: -5px; /* Adjust these values to control the size of the animated border */
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  background: linear-gradient(270deg, #6600ff, #c0c0c0, #ca32cd, #ffcc00);
+  background-size: 400% 400%;
+  animation: rotateStrip 4s linear infinite;
+  border-radius: 10px;
+}
+
+.sponser-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.sponser-container img {
+  height: 250px;
+  width: 250px;
+  border-radius: 10px;
+}
+
+.sponser-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-link {
+  border: 2px solid white;
+  display: inline-block;
+  background-color: #00000000; /* Button color */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Button padding */
+  text-align: center;
+  text-decoration: none; /* Removes underline from link */
+  font-weight: bold;
+  transition: background-color 0.3s; /* Smooth background color change on hover */
+}
+
+.button-link:hover,
+.button-link:focus {
+  background-color: #ffffff;
+  color: black; /* Darker shade on hover/focus for better interaction */
 }
 
 @media only screen and (max-width: 600px) {
@@ -757,6 +868,29 @@ p {
     max-width: 100% !important;
     position: relative !important;
     font-size: 5px !important;
+  }
+
+  hr {
+    display: block; /* or 'inline-block' if you prefer */
+    width: 80% !important;
+    margin: 20px auto !important;
+  }
+
+  .sponser-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .sponser-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center;
+  }
+  .sponser-container img {
+    height: 50%;
+    width: 50%;
+    border-radius: 10px;
   }
 
   #watsapp .container h2,
@@ -1008,5 +1142,20 @@ p {
   }
   .countdown-container {
     gap: 10px;
+  }
+
+  .prize-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .prize-card {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
   }
 }
