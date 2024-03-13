@@ -142,7 +142,15 @@ span {
 
 .group {
   margin-bottom: 20px;
-  border-left: 4px solid #6200ee;
+  border-left: 4px solid #adff2f;
+  background-color: #292929;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.group {
+  margin-bottom: 20px;
+  border-left: 4px solid #adff2f;
   background-color: #292929;
   padding: 10px;
   border-radius: 8px;
@@ -177,7 +185,15 @@ span {
 
 .group ul li:before {
   content: "•";
-  color: #6200ee; /* Bullet color */
+  color: #adff2f; /* Bullet color */
+  font-size: 20px;
+  position: absolute;
+  left: -20px;
+}
+
+.group-yellow ul li:before {
+  content: "•";
+  color: #adff2f; /* Bullet color */
   font-size: 20px;
   position: absolute;
   left: -20px;
@@ -1144,6 +1160,10 @@ h6 {
     max-width: 100% !important;
     position: relative !important;
     font-size: 5px !important;
+  }
+
+  #registration .button-link {
+    padding: 5px 10px !important;
   }
 
   hr {
