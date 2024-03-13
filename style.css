@@ -1311,8 +1311,24 @@ h6 {
   .platform li {
     font-size: 15px;
   }
-  .platform img {
-    width: 150px;
+
+  .new_footer_top .footer_bg {
+    position: absolute;
+    bottom: 0;
+    background: url(./assets/footer2.png) no-repeat scroll center 0;
+    background-size: 180%;
+  }
+  .new_footer_top .footer_bg .footer_bg_two {
+    background: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhyLGwEUVwPK6Vi8xXMymsc-ZXVwLWyXhogZxbcXQYSY55REw_0D4VTQnsVzCrL7nsyjd0P7RVOI5NKJbQ75koZIalD8mqbMquP20fL3DxsWngKkOLOzoOf9sMuxlbyfkIBTsDw5WFUj-YJiI50yzgVjF8cZPHhEjkOP_PRTQXDHEq8AyWpBiJdN9SfQA/s16000/cyclist.gif)
+      no-repeat center center;
+    width: 88px;
+    height: 100px;
+    background-size: 100%;
+    bottom: 0;
+    left: 38%;
+    position: absolute;
+    -webkit-animation: myfirst 30s linear infinite;
+    animation: myfirst 30s linear infinite;
   }
 
   .announcements li,
@@ -1330,9 +1346,17 @@ h6 {
     margin-top: 0px !important;
     padding-top: 80px !important;
   }
+
+  .new_footer_top .footer_bg {
+    position: absolute;
+    bottom: 0;
+    background: url(./assets/footer2.png) no-repeat scroll center 0;
+    width: 160% !important;
+    height: 255px !important;
+  }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 380px) {
   /* Your CSS styles for XS devices go here */
   body h1 {
     font-size: 20px !important;
@@ -1353,8 +1377,29 @@ h6 {
     font-size: 9px !important;
     margin-right: 5px !important;
   }
+
+  .new_footer_top .footer_bg {
+    position: absolute;
+    bottom: 0;
+    background: url(./assets/footer2.png) no-repeat scroll center 0;
+    background-size: 180%;
+    height: 200px;
+  }
   .hero h1 {
     font-size: 20px !important;
+  }
+
+  .new_footer_top .footer_bg .footer_bg_two {
+    background: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhyLGwEUVwPK6Vi8xXMymsc-ZXVwLWyXhogZxbcXQYSY55REw_0D4VTQnsVzCrL7nsyjd0P7RVOI5NKJbQ75koZIalD8mqbMquP20fL3DxsWngKkOLOzoOf9sMuxlbyfkIBTsDw5WFUj-YJiI50yzgVjF8cZPHhEjkOP_PRTQXDHEq8AyWpBiJdN9SfQA/s16000/cyclist.gif)
+      no-repeat center center;
+    width: 50px;
+    height: 100px;
+    background-size: 100%;
+    bottom: 80px;
+    left: 38%;
+    position: absolute;
+    -webkit-animation: myfirst 30s linear infinite;
+    animation: myfirst 30s linear infinite;
   }
   .hero h2 {
     font-size: 15px !important;
