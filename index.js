@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     gsap.from(name, {
       y: "-100%", // Start from above the view
       opacity: 0, // Start invisible
-      duration: 2, // Animation duration
+      duration: 1, // Animation duration
       ease: "power2.out", // Easing function for a smooth effect
       scrollTrigger: {
         // markers: true,
@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   // animateGroup(".registration-domain");
 
   function executeAnimations() {
-    vrAnimation(".vr-img", ".section2");
+    vrAnimation(".vr-img", ".countdown");
     imageAnimation(".section2 .img-container", ".section2");
     imageAnimation(".section2 .para-container", ".section2");
     imageAnimation(".section3 .img-container", ".section3");
